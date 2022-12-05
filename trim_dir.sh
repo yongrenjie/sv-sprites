@@ -24,9 +24,10 @@ function trim {
   echo "trimming $1"
   convert "$1" -trim +repage "$1"
 #   magick mogrify -path "$1" -trim +repage -format png *.png
-  # add 5px border
-  convert "$1" -bordercolor transparent -border 5 "$1"
+  # make it smaller
   convert "$1" -resize 35x35\> "$1"
+  # add 3px border
+  convert "$1" -bordercolor transparent -border 3 "$1"
 #   mogrify -path fullpathto/temp2 -resize 60x60% -quality 60 -format jpg *.png
 #   magick mogrify -path $1 -bordercolor transparent -border 3 -format png *.png
 }
