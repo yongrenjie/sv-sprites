@@ -25,7 +25,7 @@ function trim {
   convert "$1" -trim +repage "$1"
 #   magick mogrify -path "$1" -trim +repage -format png *.png
   # make it smaller
-  convert "$1" -resize 20x20\> "$1"
+  convert "$1" -resize 25x25\> "$1"
   # add 2px border
   convert "$1" -bordercolor transparent -border 2 "$1"
 #   mogrify -path fullpathto/temp2 -resize 60x60% -quality 60 -format jpg *.png

@@ -14,8 +14,11 @@ os.chdir(this_dir)
 #     os.system(f"curl https://www.serebii.net/pokedex-sv/icon/{i}.png -o original/{i}.png")
 
 # # Tatsugiri and Squawkabilly
-# for i in ["960-b", "960-y", "960-w",
-#           "952-d", "952-s"]:
+# for i in ["960-b", "960-y", "960-w",  # squawkabilly
+#           "952-d", "952-s",  # tatsugiri
+#           "194-p",   # wooper
+#           "128-p", "128-b", "128-a",   # tauros
+#           ]:
 #     print(i)
 #     os.system(f"curl https://www.serebii.net/pokedex-sv/icon/{i}.png -o original/{i}.png")
 

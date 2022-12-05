@@ -1,3 +1,7 @@
+194-p wooper-paldea
+128-p tauros-paldea
+128-b tauros-blaze
+128-a tauros-aqua
 906 sprigatito
 907 floragato
 908 meowscarada
