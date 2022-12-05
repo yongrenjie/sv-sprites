@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # taken from https://github.com/martimlobao/pokesprite/blob/master/scripts/trim_dir.sh
 
+# modified to search only in cwd (not recursively)
+# note: only works with BSD find because I'm on a Mac
+
 PROJECT="pokesprite/trim_dir"
 DESCRIPTION="Trims off transparent pixels from all images in a directory."
 SELF="trim_dir.sh"
@@ -23,13 +26,14 @@ function trim {
 #   magick mogrify -path "$1" -trim +repage -format png *.png
   # add 5px border
   convert "$1" -bordercolor transparent -border 5 "$1"
+  convert "$1" -resize 56x56\> "$1"
 #   mogrify -path fullpathto/temp2 -resize 60x60% -quality 60 -format jpg *.png
 #   magick mogrify -path $1 -bordercolor transparent -border 3 -format png *.png
 }
 
 function trim_dir {
   for d in "$@"; do
-    find "$d" -name '*.png' -print0 |
+    find "$d" -depth 1 -name '*.png' -print0 |
     while IFS= read -r -d '' f; do
       trim "$f"
     done
