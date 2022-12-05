@@ -6,18 +6,18 @@ from pathlib import Path
 this_dir = Path(__file__).parent.absolute()
 os.chdir(this_dir)
 
-os.system("mkdir original")
+# os.system("mkdir original")
 
-# Regular mons
-for i in range(906, 1011):
-    print(i)
-    os.system(f"curl https://www.serebii.net/pokedex-sv/icon/{i}.png -o original/{i}.png")
+# # Regular mons
+# for i in range(906, 1011):
+#     print(i)
+#     os.system(f"curl https://www.serebii.net/pokedex-sv/icon/{i}.png -o original/{i}.png")
 
-# Tatsugiri and Squawkabilly
-for i in ["960-b", "960-y", "960-w",
-          "952-d", "952-s"]:
-    print(i)
-    os.system(f"curl https://www.serebii.net/pokedex-sv/icon/{i}.png -o original/{i}.png")
+# # Tatsugiri and Squawkabilly
+# for i in ["960-b", "960-y", "960-w",
+#           "952-d", "952-s"]:
+#     print(i)
+#     os.system(f"curl https://www.serebii.net/pokedex-sv/icon/{i}.png -o original/{i}.png")
 
 
 # Rename
